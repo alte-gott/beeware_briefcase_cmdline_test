@@ -1,89 +1,29 @@
-.. |logo| image:: https://beeware.org/project/projects/tools/briefcase/briefcase.png
-   :width: 72px
-   :target: https://beeware.org/briefcase
+# Briefcase Cmdline 测试
 
-.. |pyversions| image:: https://img.shields.io/pypi/pyversions/briefcase.svg
-   :target: https://pypi.python.org/pypi/briefcase
-   :alt: Python Versions
+此目录包含对 Briefcase 命令行工具（`briefcase`）进行的单元测试，测试内容涵盖了 `briefcase -V` 命令、`dev` 和 `run` 命令，以及在不同操作系统（如 macOS 和 Windows）上的兼容性测试。
 
-.. |version| image:: https://img.shields.io/pypi/v/briefcase.svg
-   :target: https://pypi.python.org/pypi/briefcase
-   :alt: PyPI Version
+## 测试内容
 
-.. |maturity| image:: https://img.shields.io/pypi/status/briefcase.svg
-   :target: https://pypi.python.org/pypi/briefcase
-   :alt: Maturity
+- **Briefcase 版本检查命令 (`briefcase -V`)**：
+  - 测试了 `briefcase -V` 命令，确保正确输出当前安装的 Briefcase 版本。
+  
+- **`dev` 和 `run` 命令**：
+  - 对 `briefcase dev` 和 `briefcase run` 命令进行了功能性测试，确保命令执行时能够正常运行且符合预期行为。
 
-.. |license| image:: https://img.shields.io/pypi/l/briefcase.svg
-   :target: https://github.com/beeware/briefcase/blob/main/LICENSE
-   :alt: BSD License
+- **macOS 兼容性**：
+  - 测试了 Briefcase 是否能够在 macOS 系统上正确运行，包括平台相关的异常处理。
+  
+- **Windows 兼容性**：
+  - 进行了对 Windows 平台上 Briefcase 命令行工具的兼容性测试，确保跨平台的一致性。
 
-.. |ci| image:: https://github.com/beeware/briefcase/workflows/CI/badge.svg?branch=main
-   :target: https://github.com/beeware/briefcase/actions
-   :alt: Build Status
 
-.. |social| image:: https://img.shields.io/discord/836455665257021440?label=Discord%20Chat&logo=discord&style=plastic
-   :target: https://beeware.org/bee/chat/
-   :alt: Discord server
+## 依赖
 
-|logo|
+- Python 版本 >= 3.12
+- `pytest`：用于测试框架。
+- `pytest-mock`：用于在测试中进行对象和方法的模拟。
 
-Briefcase
-=========
+你可以通过以下命令安装依赖：
 
-|pyversions| |version| |maturity| |license| |ci| |social|
-
-Briefcase is a tool for converting a Python project into a standalone native
-application. You can package projects for:
-
-* Mac
-* Windows
-* Linux
-* iPhone/iPad
-* Android
-* Web
-
-Support for AppleTV, watchOS, and wearOS deployments is planned.
-
-Getting started
----------------
-
-To install Briefcase, run::
-
-   $ python -m pip install briefcase
-
-If you would like a full introduction to using Briefcase, try the `BeeWare tutorial
-<https://docs.beeware.org>`__. This tutorial walks you through the process of creating
-and packaging a new application with Briefcase.
-
-Documentation
--------------
-
-Documentation for Briefcase can be found on `Read The Docs`_.
-
-Community
----------
-
-Briefcase is part of the `BeeWare suite`_. You can talk to the community through:
-
-* `@beeware@fosstodon.org on Mastodon <https://fosstodon.org/@beeware>`__
-
-* `Discord <https://beeware.org/bee/chat/>`__
-
-* The Briefcase `Github Discussions forum <https://github.com/beeware/briefcase/discussions>`__
-
-We foster a welcoming and respectful community as described in our
-`BeeWare Community Code of Conduct`_.
-
-Contributing
-------------
-
-If you experience problems with Briefcase, `log them on GitHub`_. If you
-want to contribute code, please `fork the code`_ and `submit a pull request`_.
-
-.. _BeeWare suite: https://beeware.org
-.. _Read The Docs: https://briefcase.readthedocs.io
-.. _BeeWare Community Code of Conduct: https://beeware.org/community/behavior/
-.. _log them on Github: https://github.com/beeware/briefcase/issues
-.. _fork the code: https://github.com/beeware/briefcase
-.. _submit a pull request: https://github.com/beeware/briefcase/pulls
+```bash
+pip install -r requirements.txt
