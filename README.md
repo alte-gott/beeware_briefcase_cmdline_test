@@ -27,3 +27,15 @@
 
 ```bash
 pip install -r requirements.txt
+pip install pytest
+
+## 运行测试
+
+你可以使用 `pytest` 命令运行所有测试：
+
+```bash
+pytest
+
+如果只想运行特定的测试文件，可以指定测试文件的路径：
+```bash
+pytest test_cmdline.py
