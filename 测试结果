@@ -1,0 +1,16 @@
+============================= test session starts =============================
+collecting ... collected 7 items
+
+test_cmdline.py::test_version_only PASSED                                [ 14%]
+test_cmdline.py::test_linux_default SKIPPED (需要Linux系统)              [ 28%]
+Skipped: 需要Linux系统
+
+test_cmdline.py::test_macOS_default SKIPPED (需要macOS系统)              [ 42%]
+Skipped: 需要macOS系统
+
+test_cmdline.py::test_bare_command_version PASSED                        [ 57%]
+test_cmdline.py::test_command_unknown_platform PASSED                    [ 71%]
+test_cmdline.py::test_command_unknown_format PASSED                      [ 85%]
+test_cmdline.py::test_command_explicit_unsupported_format PASSED         [100%]
+
+======================== 5 passed, 2 skipped in 0.42s =========================
